@@ -1,0 +1,188 @@
+<!doctype html >
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" >
+        <title>Almanya hakkında</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/stillerim.css" media="all" />
+    </head>
+    <body ng-app="myApp" >
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Almanya Gezi" height="100%"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html"><i class="fa fa-home"></i> Ana Sayfa <span class="sr-only">(current)</span></a></li>
+                        <li><a href="haber.html"><i class="fa fa-newspaper" ></i> Haberler</a></li>
+                        <li><a href="index.html#duyuruya"><i class="fa fa-bullhorn" ></i> Duyurular</a></li>
+                        <li class="active"><a href="almanya.html"><i class="fa fa-exclamation-circle" ></i> Almanya Hakkında</a></li>
+                        <li><a href="#"><i class="fa fa-phone" ></i> İletişim</a></li>
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">liste <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">bölüm 1</a></li>
+                                    <li><a href="#">bölüm 2</a></li>
+                                    <li><a href="#">bölüm 3</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">bölüm 4</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">bölüm 5</a></li>
+                                </ul>
+                            </li>
+                        <li><a href="#den1"> deneme</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in-alt" ></i> Giriş</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-form" ng-controller="search">
+                        <div class="form-group search-bar">
+                            <input type="text" class="form-control search-query" placeholder="Ara" ng-model="q">
+                            <ul class="results" style="display: none;" >
+                                <li ng-repeat="deger in degerler | filter:q"><a href="#" >{{deger}}</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12" >
+                        <div class="page-header">
+                            <h1>Almanya Hakkında</h1>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" >
+                        <ol class="breadcrumb">
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="#">Almanya Hakkında</a></li>
+                        </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table>
+                        <tr>
+                            <td width="40%" ><h4><b>Resmi Adı</b></h4></td>
+                            <td><p>Almanya Federal Cumhuriyeti (Alm. Bundesrepublik Deutschland)</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>Yönetim Şekli</b></h4></td>
+                            <td><p>Federal Parlamenter Cumhuriyet</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>Başkenti</b></h4></td>
+                            <td><p>Berlin</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>Nüfusu</b></h4></td>
+                            <td><p>80,716,000 (%87.5 Alman, %6.5 Türk, % 6 Diğer Milletler)</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>GSYİH</b></h4></td>
+                            <td><p>3.815 Trilyon $</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>Kişi Başı Yıllık Gelir</b></h4></td>
+                            <td><p>46,955 $</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>Para Birimi</b></h4></td>
+                            <td><p>Euro (Avro) €</p></td>
+                        </tr>
+                        <tr>
+                            <td><h4><b>Uluslararası Telefon Kodu</b></h4></td>
+                            <td><p>+49</p></td>
+                        </tr>
+                    </table><br>
+                    
+                    <hr>
+                    <h4><b>Tarihi</b></h4>
+                    <p>
+                        İkinci Dünya Savaşı sonrası Almanya Müttefikler tarafından oluşturulan ve kontrol edilen işgal bölgelerine ayrılmıştı.<br>
+                        23 Mayıs 1949’da Fransız, İngiliz ve Amerika işgal bölgeleri birleştirilerek Almanya Federal Cumhuriyeti kuruldu.<br>
+                        7 Ekim 1949’da ise Sovyet işgali altında bulunan Doğu Almanya olarak da bilinen Alman Demokratik Cumhuriyeti kuruldu.<br>
+                        3 Ekim 1990 tarihinde bu iki devlet birleşerek bugünkü Almanya Federal Cumhuriyetini oluşturdular.
+                    </p><hr>
+                    <h4><b>Coğrafya</b></h4> 
+                    <p> 
+                        Almanya, Orta Avrupa’da yer alan, kuzeyde Danimarka, doğuda Polonya ve Çek Cumhurriyeti, güneyde Avusturya ve İsviçre,<br>
+                        batıda ise Faransa ve Lüksemburg, Belçika ve Hollanda devletleri ile sınır komşusudur.<br>
+                        Güney’de bulunan Alp Dağları üzerinde ülkenin en yüksek noktası Zugspitze bulunur. (2,962 metre). Kuzeyde Baltık Denizi ve<br>
+                        Kuzey Denizi kıyıları bulunur. Ülkenin orta kesimi ormanlık, kuzeyi ise ovalardan oluşur. Ren, Tuna ve Elbe ülkenin en büyük nehirleridir.<br>
+                        Almanya’da demir, kömür, potasyum, uranyum, bakır, doğal gaz, nikel gibi doğal kaynaklar bulunmaktadır.
+                    </p><hr>
+                    <h4><b>İklimi</b></h4>
+                    <p>
+                       Almanya’nın genelinde ılıman bir iklim görülür. İklim, nem taşıyan batı rüzgarları ve sıcak Kuzey Atlantik Akıntıları tarafından<br>
+                       da etkilenmektedir. Her mevsim bol yağış alır. Kışları çok soğuk geçmez, yazları ise çok sıcak değildir. Doğu bölgelerinde daha çok<br>
+                       karasal iklim özellikleri görülmektedir.
+                    </p><hr>
+                    <h4><b>Demografi</b></h4>
+                    <p>
+                       80 milyonun üzerinde nüfusa sahip Almanya, Rusya’nın ardından Avrupa’nın en fazla nüfusa sahip ikinci ülkesidir. Nüfusun yaklaşık <br>
+                       yüzde 7.7’sini göçmenler oluşturmaktadır. Ülkenin resmi dili Almancadır, bunun yanında Türkçe, Kürtçe, Lehçe ve Rusça da konuşulan <br>
+                       diller arasındadır. Ülke nüfusunun yüzde 67’si yabancı bir dili konuşabilmektedir.
+                    </p><hr>
+                    <h4><b>Din</b></h4>
+                    <p>
+                       Ülkedeki en yaygın din yüzde 66,8 ile Hristiyanlıktır.  (yüzde 30,8 Katolik, yüzde 30 Protestan) Nüfusun yüzde 32 – 35’i bir dine <br>
+                       inanmadıklarını belirtmişlerdir. İslam ise ülkenin ikinci en büyük dini durumundadır. 2011 nüfus sayımında nüfusunu yüzde 1,9’u Müslüman<br>
+                        olduğunu belirmiştir.
+                    </p><hr>
+                </div>
+            </div>
+        </div>
+        <a name="den1"></a>
+        <div id="deneme" >
+            <h1>deneme</h1>
+            <p>İkinci Dünya Savaşı sonrası Almanya Müttefikler tarafından oluşturulan ve kontrol edilen işgal bölgelerine ayrılmıştı. 23 Mayıs 1949’da Fransız, İngiliz ve Amerika işgal bölgeleri birleştirilerek Almanya Federal Cumhuriyeti kuruldu</p>
+            <br> <br>
+        </div>
+        <div class="modal fade" id="login" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <form action="giris.html" class="giris" method="post" >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title center-text text-center">Giriş Yap</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" ></i></span>
+                                <input type="email" class="form-control" placeholder="Kullanıcı Adı" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" ></i></span>
+                                    <input type="password" class="form-control" placeholder="Şifre" aria-describedby="basic-addon1">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/jquery.min.js" ></script>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" ></script>
+        <script src="js/main.js" ></script>
+    </body>
+</html>

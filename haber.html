@@ -1,0 +1,120 @@
+<!doctype html >
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" >
+        <title>Haberler</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/stillerim.css" media="all" />
+    </head>
+    <body ng-app="myApp" >
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Almanya Gezi" height="100%"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html"><i class="fa fa-home"></i> Ana Sayfa <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="haber.html"><i class="fa fa-newspaper" ></i> Haberler</a></li>
+                        <li><a href="index.html#duyuruya"><i class="fa fa-bullhorn" ></i> Duyurular</a></li>
+                        <li><a href="almanya.html"><i class="fa fa-exclamation-circle" ></i> Almanya Hakkında</a></li>
+                        <li><a href="#"><i class="fa fa-phone" ></i> İletişim</a></li>
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">liste <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">bölüm 1</a></li>
+                                    <li><a href="#">bölüm 2</a></li>
+                                    <li><a href="#">bölüm 3</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">bölüm 4</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">bölüm 5</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in-alt" ></i> Giriş</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-form" ng-controller="search">
+                        <div class="form-group search-bar">
+                            <input type="text" class="form-control search-query" placeholder="Ara" ng-model="q">
+                            <ul class="results" style="display: none;" >
+                                <li ng-repeat="deger in degerler | filter:q"><a href="#" >{{deger}}</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12" >
+                        <div class="page-header">
+                            <h1>Haber 1</h1>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" >
+                        <ol class="breadcrumb">
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="#">Haberler</a></li>
+                        <li class="active">Haber 1</li>
+                        </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="thumbnail">
+                        <img src="https://images7.alphacoders.com/589/589602.jpg" alt="">
+                        <i>6.5.2018</i>
+                        <div class="caption">
+                            <p>İkinci Dünya Savaşı sonrası Almanya Müttefikler tarafından oluşturulan ve kontrol edilen işgal bölgelerine ayrılmıştı. 23 Mayıs 1949’da Fransız, İngiliz ve Amerika işgal bölgeleri birleştirilerek Almanya Federal Cumhuriyeti kuruldu. 7 Ekim 1949’da ise Sovyet işgali altında bulunan Doğu Almanya olarak da bilinen Alman Demokratik Cumhuriyeti kuruldu. 3 Ekim 1990 tarihinde bu iki devlet birleşerek bugünkü Almanya Federal Cumhuriyetini oluşturdular.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="login" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <form action="giris.html" class="giris" method="post" >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title center-text text-center">Giriş Yap</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" ></i></span>
+                                <input type="email" class="form-control" placeholder="Kullanıcı Adı" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" ></i></span>
+                                    <input type="password" class="form-control" placeholder="Şifre" aria-describedby="basic-addon1">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/jquery.min.js" ></script>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" ></script>
+        <script src="js/main.js" ></script>
+    </body>
+</html>
